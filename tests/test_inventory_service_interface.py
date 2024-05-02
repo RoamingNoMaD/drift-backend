@@ -15,8 +15,7 @@ from . import fixtures
 class InventoryServiceTests(unittest.TestCase):
     def setUp(self):
         test_connexion_app = app.create_app()
-        test_flask_app = test_connexion_app.app
-        self.client = test_flask_app.test_client()
+        self.client = test_connexion_app.test_client()
         self.mock_logger = mock.Mock()
 
         self.mock_counters = {
